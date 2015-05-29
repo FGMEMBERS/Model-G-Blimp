@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<!--
+  ZF Navy free balloon 3d instrument box.
+
+  Copyright (C) 2006 - 2011  Anders Gidenstam  (anders(at)gidenstam.org)
+  This file is licensed under the GPL license version 2 or later.
+-->
+<PropertyList>
+
+ <path>panel.ac</path>
+
+ <offsets>
+  <!-- x/y/z == back/right/up -->
+  <x-m> 0.0 </x-m>
+  <y-m> 0.0 </y-m>
+  <z-m> 0.0 </z-m>
+ </offsets>
+
+ <!-- 3d instruments -->
+
+  <model>
+  <name>Clock</name>
+  <path>Aircraft/Model-G-Blimp/Models/Panel/compass/compass.xml</path>
+  <offsets>
+   <heading-deg>90</heading-deg>
+   <pitch-deg>0</pitch-deg>
+   <x-m>  0.170 </x-m>
+   <y-m>  -0.240 </y-m>
+   <z-m>  -0.102 </z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>vertical-speed</name>
+  <path>Aircraft/Model-G-Blimp/Models/Panel/VSI/VSI.xml</path>
+  <offsets>
+   <heading-deg>0</heading-deg>
+   <pitch-deg>-24</pitch-deg>
+   <x-m>  0.059 </x-m>
+   <y-m>  -0.190 </y-m>
+   <z-m>  -0.0670 </z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Altimeter</name>
+  <path>Aircraft/Model-G-Blimp/Models/Panel/alt/alt.xml</path>
+  <offsets>
+   <heading-deg>0</heading-deg>
+   <pitch-deg>-24</pitch-deg>
+   <x-m>  0.049 </x-m>
+   <y-m>  0.08 </y-m>
+   <z-m>  -0.030 </z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>engine-rpm</name>
+  <path>Aircraft/Model-G-Blimp/Models/Panel/RPM/RPM.xml</path>
+  <offsets>
+   <heading-deg>0</heading-deg>
+   <pitch-deg>-24</pitch-deg>
+   <x-m>  0.018 </x-m>
+   <y-m>  0.00 </y-m>
+   <z-m>  0.038 </z-m>
+  </offsets>
+ </model>
+
+<model>
+  <name>oil-pressure</name>
+  <path>Aircraft/Model-G-Blimp/Models/Panel/oil-press/oil-press.xml</path>
+  <offsets>
+   <heading-deg>0</heading-deg>
+   <pitch-deg>-24</pitch-deg>
+   <x-m>  0.062 </x-m>
+   <y-m>  -0.263 </y-m>
+   <z-m>  -0.082 </z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>airspeed-indicator</name>
+  <path>Aircraft/Model-G-Blimp/Models/Panel/ASI/ASI.xml</path>
+  <offsets>
+   <heading-deg>0</heading-deg>
+   <pitch-deg>-24</pitch-deg>
+   <x-m>  0.047 </x-m>
+   <y-m>  -0.08 </y-m>
+   <z-m>  -0.030 </z-m>
+  </offsets>
+ </model>
+
+   <model>
+  <name>outside-air-temp</name>
+  <path>Aircraft/Model-G-Blimp/Models/Panel/oat/oat.xml</path>
+  <offsets>
+   <heading-deg>0</heading-deg>
+   <pitch-deg>-24</pitch-deg>
+   <x-m>  0.059 </x-m>
+   <y-m>  0.190 </y-m>
+   <z-m>  -0.0670 </z-m>
+  </offsets>
+ </model>
+
+  <!-- <model>
+  <name>magneto-switch</name>
+  <path>Aircraft/Model-G-Blimp/Models/Panel/compass/compass.xml</path>
+  <offsets>
+   <heading-deg>90</heading-deg>
+   <pitch-deg>0</pitch-deg>
+   <x-m>  0.090 </x-m>
+   <y-m>  -0.31 </y-m>
+   <z-m>  0.050 </z-m>
+  </offsets>
+ </model> -->
+
+
+</PropertyList>

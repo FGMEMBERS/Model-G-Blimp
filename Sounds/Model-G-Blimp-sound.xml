@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ########################################
+
+ # some .wav files from the DR400-jsbSim by PAF team
+ # April 2012 : Modified by PAF team
+ # http://equipe-flightgear.forumactif.com
+
+Modded for RAF-BE-2 Bi-plane by Lester Boffo, July 29, 2014.
+
+##########################################
+
+-->
+
+
+<PropertyList>
+
+  <fx>
+
+    <crank>
+      <name>engstart</name>
+      <path>Aircraft/Model-G-Blimp/Sounds/green-start.wav</path>
+      <property>engines/engine/cranking</property>
+      <volume>
+        <offset>-0.8</offset>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </crank>
+
+    <crank>
+      <name>crank</name>
+      <mode>looped</mode>
+     <path>Aircraft/Model-G-Blimp/Sounds/green-start.wav</path>
+      <condition>
+        <property>engines/engine/cranking</property>
+        <not>
+          <property>engines/engine/running</property>
+        </not>
+      </condition>
+      <volume>
+        <offset>0.9</offset>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </crank>
+
+    <crank>
+      <name>cough</name>
+      <path>Aircraft/Model-G-Blimp/Sounds/green-sput.wav</path>
+      <property>engines/engine/running</property>
+      <volume>
+        <offset>0.7</offset>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </crank>
+
+    <engine>
+      <name>engine</name>
+      <mode>looped</mode>
+      <path>Aircraft/Model-G-Blimp/Sounds/running.wav</path>
+      <property>/engines/engine/running</property>
+      <volume>
+        <property>engines/engine/mp-osi</property>
+        <factor>0.00375</factor>
+        <min>0.59</min>
+        <max>2.3</max>
+      </volume>
+      <pitch>
+        <property>engines/engine/rpm</property>
+        <factor>0.0008</factor>
+        <min>0.2</min>
+        <max>2.0</max>
+        <offset>0.05</offset>
+      </pitch>
+      <reference-dist>180</reference-dist>
+      <max-dist>1500</max-dist>
+    </engine>
+
+    <propeller>
+      <name>propeller</name>
+      <mode>looped</mode>
+      <path>Aircraft/Model-G-Blimp/Sounds/cessna120-prop.wav</path>
+      <property>/engines/engine/running</property>
+      <pitch>
+        <property>/engines/engine/mp-osi</property>
+        <factor>0.0016</factor>
+        <min>0.1</min>
+        <max>2.0</max>
+        <offset>0.9</offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </propeller>
+    
+    <stop>
+    <name>stop</name>
+    <path>Aircraft/Model-G-Blimp/Sounds/greene-shutdown.wav</path>
+    <condition>
+      <not>
+            <property>/engines/engine/running</property>
+      </not>
+    </condition>
+       <volume>
+          <property>/sim/current-view/internal</property>
+               <factor>2.0</factor>
+      <offset>1.0</offset>
+       </volume>
+    <reference-dist>100</reference-dist>
+    <max-dist>1000</max-dist>
+    <position>
+      <x> -2.627 </x>
+      <y>  1.740 </y>
+      <z>  0.021 </z>
+    </position>
+  </stop>  
+    
+    <rumble>
+      <name>rumble</name>
+      <mode>looped</mode>
+      <path>Sounds/rumble.wav</path>
+      <condition>
+        <and>
+          <or>
+            <property>gear/gear[0]/wow</property>
+            <property>gear/gear[1]/wow</property>
+            <property>gear/gear[2]/wow</property>
+          </or>
+          <or>
+            <greater-than>
+              <property>gear/gear[0]/rollspeed-ms</property>
+              <value>1</value>
+            </greater-than>
+            <greater-than>
+              <property>gear/gear[1]/rollspeed-ms</property>
+              <value>1</value>
+            </greater-than>
+            <greater-than>
+              <property>gear/gear[2]/rollspeed-ms</property>
+              <value>1</value>
+            </greater-than>
+          </or>
+        </and>
+      </condition>
+      <volume>
+        <property>velocities/airspeed-kt</property>
+        <type>log</type>
+        <factor>0.5</factor>
+        <max>2.5</max>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </rumble>
+
+    <squeal>
+      <name>squeal</name>
+      <path>Aircraft/RAF-BE-2/Sounds/bump4.wav</path>
+      <condition>
+        <or>
+          <property>gear/gear[0]/wow</property>
+          <property>gear/gear[1]/wow</property>
+          <property>gear/gear[2]/wow</property>
+        </or>
+      </condition>
+      <volume>
+        <property>velocities/speed-down-fps</property>
+        <factor>0.5</factor>
+        <max>1.0</max>
+      </volume>
+      <volume>
+        <property>velocities/airspeed-kt</property>
+        <factor>0.01</factor>
+        <max>0.2</max>
+        <max>1.0</max>
+      </volume>
+      <volume>
+        <internal>dt_stop</internal>
+        <factor>0.05</factor>
+        <max>1.0</max>
+      </volume>
+      <pitch>
+        <property>velocities/airspeed-kt</property>
+        <factor>0.0025</factor>
+        <offset>1.2</offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </squeal>
+
+    
+<!-- wind noise -->
+    <wind>
+      <name>wind</name>
+      <mode>looped</mode>
+      <path>Aircraft/Model-G-Blimp/Sounds/cessna120-wind.wav</path>
+      <property>velocities/airspeed-kt</property>
+      <volume>
+        <property>velocities/airspeed-kt</property>
+        <factor>0.005</factor>
+        <max>1.5</max>
+      </volume>
+      <pitch>
+        <property>velocities/airspeed-kt</property>
+        <factor>0.005</factor>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </wind>
+
+   <!-- Wing stall buffeting -->
+
+      <stall>
+   <name>stall</name>
+   <mode>looped</mode>
+   <type>avionics</type>
+   <path>Aircraft/Model-G-Blimp/Sounds/StallBuffet2.wav</path>
+   <condition>
+    <and>
+     <property>sim/alarms/stall-warning</property>
+     <greater-than>
+       <property>velocities/airspeed-kt</property>
+       <value>10</value>
+     </greater-than>
+     <not>
+       <property>gear/gear[0]/wow</property>
+       <property>gear/gear[1]/wow</property>
+       <property>gear/gear[2]/wow</property>
+     </not>
+    </and>
+   </condition>
+   <volume>
+    <property>sim/alarms/stall-warning</property>
+    <max>1.0</max>
+   </volume>
+   <reference-dist>10.0</reference-dist>
+   <max-dist>20.0</max-dist>
+  </stall>           
+
+    <!--                  Toggle Switches                  -->
+
+    <click>
+      <name>Magnetos-off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/engines/engine/magnetos</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+    </click>
+
+    <click>
+      <name>Magnetos-R</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <equals>
+          <property>controls/engines/engine/magnetos</property>
+          <value>1</value>
+        </equals>
+      </condition>
+      <volume>
+        <factor>0.8</factor>
+      </volume>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist>
+    </click>
+
+    <click>
+      <name>Magnetos-L</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <equals>
+          <property>controls/engines/engine/magnetos</property>
+          <value>2</value>
+        </equals>
+      </condition>
+      <volume>
+        <factor>0.8</factor>
+      </volume>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist>
+    </click>
+
+    <click>
+      <name>Magnetos-B</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <equals>
+          <property>controls/engines/engine/magnetos</property>
+          <value>3</value>
+        </equals>
+      </condition>
+      <volume>
+        <factor>0.8</factor>
+      </volume>
+      <reference-dist>0.5</reference-dist>
+      <max-dist>5.0</max-dist>
+    </click>
+
+
+  </fx>
+
+</PropertyList>

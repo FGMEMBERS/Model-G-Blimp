@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+  ZR Navy free gas balloon model for FlightGear.
+
+  Copyright (C) 2006 - 2013  Anders Gidenstam  (anders(at)gidenstam.org)
+  This file is licensed under the GPL license version 2 or later.
+-->
+<PropertyList>
+
+ <altimeter>
+  <name>altimeter</name>
+  <number>0</number>
+  <static-pressure>/systems/static/pressure-inhg</static-pressure>
+  <quantum>0</quantum>
+  <tau>0</tau>
+ </altimeter>
+
+ <clock>
+  <name>clock</name>
+  <number>0</number>
+ </clock>
+
+ <magnetic-compass>
+  <name>magnetic-compass</name>
+  <number>0</number>
+ </magnetic-compass>
+
+ <vertical-speed-indicator>
+  <name>vertical-speed-indicator</name>
+  <number>0</number>
+  <static-pressure>/systems/static/pressure-inhg</static-pressure>
+ </vertical-speed-indicator>
+
+</PropertyList>

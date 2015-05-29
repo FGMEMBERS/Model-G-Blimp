@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+  File:     anzani_V4.xml
+  Author:   partial aeromatic-lesterboffo 
+
+  Inputs:
+    name:           Anzani Y
+    type:           piston
+    power:          35.0 hp
+    augmented?      no
+    injected?       no
+-->
+
+<piston_engine name="eng_AnzaniV4">
+  <minmp unit="INHG">          14.1 </minmp>
+  <maxmp unit="INHG">         28.5 </maxmp>
+  <displacement unit="IN3"> 124.00 </displacement>
+  <maxhp>         25.00 </maxhp>
+  <bore unit="IN">   3.91 </bore>
+  <stroke unit="IN"> 5.175 </stroke>
+  <cylinders>    2.0 </cylinders>
+  <compression-ratio> 4.0 </compression-ratio>
+  <cycles>         4.0 </cycles>
+  <idlerpm>      600.0 </idlerpm>
+  <maxrpm>      1800.0 </maxrpm>
+  <maxthrottle>    1.0 </maxthrottle>
+  <minthrottle>    0.28 </minthrottle>
+  <sparkfaildrop>   0.1 </sparkfaildrop>
+  <volumetric-efficiency> 0.56 </volumetric-efficiency>
+
+</piston_engine>
